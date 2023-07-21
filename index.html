@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>documentation v2</title>
+</head>
+<body>
+
+
+    <div class="container" id="cont">
+
+        <nav class="nav-bar">
+            <h1>CSS Classes </h1>
+            <ul>
+                <li><a class="nav-link active" href="#doc_flex">Flex</a></li>
+                <li><a class="nav-link" href="#doc_oneline">One Line</a></li>
+                <li><a class="nav-link" href="#doc_title">Title</a></li>
+                <li><a class="nav-link" href="#doc_animate">Animate Me</a></li>
+                <li><a class="nav-link" href="#doc_btn">Button Primary</a></li>
+                <li><a class="nav-link" href="#doc_shadow">Shadow</a></li>
+                <li><a class="nav-link" href="#doc_container">Container</a></li>
+                <li><a class="nav-link" href="#doc_component">Component</a></li>
+                <li><a class="nav-link" href="#doc_card">Card</a></li>
+                <li><a class="nav-link" href="#doc_heading">Headings</a></li>
+                <li><a class="nav-link" href="#doc_responsive">Responsive</a></li>
+            </ul>
+
+            <h1>JS Classes </h1>
+
+            <ul>
+                   <li><a class="nav-link" href="#doc_component_js">Component</a></li>
+                   <li><a class="nav-link" href="#doc_template">Templates</a></li>
+                   <li><a class="nav-link" href="#doc_multilang">Multilang</a></li>
+              
+            </ul>
+
+            <h1>Misc </h1>
+
+            <ul>
+                   <li><a class="nav-link" href="#doc_cross">Cross Platform Software</a></li>
+            </ul>
+             
+        </nav>
+
+    <div class="main-section-right">
+
+        <section id="doc_flex" class="main-section">
+        <h2>Flex</h2>
+        <pre>
+     <code>.flex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center
+    }   
+ </code>
+    </section>
+
+    
+   
+    <section id="doc_oneline" class="main-section">
+        <h2 h2>One Line</h2>
+        <pre>
+     <code>.one-line {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis
+    }
+ </code>
+    </section>
+
+    <section id="doc_title" class="main-section">
+        <h2>Title</h2>
+        <pre>
+     <code>.title {
+        font-size: 1rem;
+        text-align: left !important;
+        font-family: SemiBold;
+    }
+ </code>
+    </section>
+
+
+    <section id="doc_animate" class="main-section">
+        <h2>Animate</h2>
+        <pre>
+     <code>.animate-me {
+        transition: all .3s ease-in-out;
+    }
+    
+    .animate-me-6 {
+        transition: all .6s ease-in-out;
+    }
+    
+    .animate-me-10 {
+        transition: all 1s ease-in-out;
+    }
+
+    .animate-fade {
+        opacity: 0;
+        animation: fade-in .5s forwards
+    }
+    
+ </code>
+    </section>
+
+    <section id="doc_btn" class="main-section">
+        <h2>Buttons</h2>
+        <pre>
+     <code>
+
+        .btn-primary {
+            background-color: var(--color-dark-blue);
+            color: var(--bg-color);
+            padding: 0 27px;
+            min-width: 200px;
+            height: 56px;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            font-family: 'SemiBold';
+            font-size: 1rem;
+        }
+        
+        .btn-secondary {
+            background-color: var(--bg-color);
+            color: var(--color-dark-blue);
+            padding: 0 27px;
+            min-width: 200px;
+            height: 56px;
+            border: 1px solid var(--color-dark-blue);
+            border-radius: 3px;
+            font-family: 'SemiBold';
+            font-size: 1rem;
+            cursor: pointer
+        }
+        
+        .suspend-btn {
+            color: var(--color-dark-blue);
+            background: transparent;
+            border: 1px solid var(--color-dark-blue);
+        }
+        
+            .suspend-btn span {
+                background: transparent !important;
+                color: var(--bg-color)   !important
+            }
+        
+        .btn-primary.submit-btn {
+            border: 1px solid var(--color-dark-blue);
+            transition: none !important;
+            background: #fff url('/assets/images/loader.gif') no-repeat center center;
+            background-size: 10%;
+            opacity: .8;
+            color: transparent;
+            pointer-events: none !important
+        }
+        
+            .btn-primary.submit-btn * {
+                color: transparent;
+                user-select: none;
+                visibility: hidden;
+                pointer-events: none !important
+            }
+        
+        .btn-primary * {
+            color: var(--bg-color) !important
+        }
+        
+        .btn-primary:not(.submit-btn,.suspend-btn):hover {
+            cursor: pointer;
+            background-color: var(--color-orange);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(0,0,0,.04)
+        }
+        
+        .question-btn:hover {
+            box-shadow: 0px 0px 6px #00000040;
+            background-color: rgba(var(--color-dark-blue-r), var(--color-dark-blue-g), var(--color-dark-blue-b), .05) !important;
+        }
+
+        .download-btn {
+            margin: 30px 20px 20px 20px;
+            border-radius: 4px;
+            background: rgba(var(--color-primary-r), var(--color-primary-g), var(--color-primary-b), .1);
+            width: 20%;
+        }
+        
+        .download-btn img {
+            width: 80%;
+        }
+ </code>
+    </section>
+
+    <section id="doc_shadow" class="main-section">
+        <h2>Shadow</h2>
+        <pre>
+     <code>.add-shadow-cat {
+        box-shadow: 0px 0px 18px 7px rgba(223, 223, 223, 0.36);
+    }
+    
+    .add-shadow-1 {
+        box-shadow: 0px 0px 1px rgba(var(--color-primary-r), var(--color-primary-g), var(--color-primary-b), 0.5)
+    }
+    
+    .add-shadow-2 {
+        box-shadow: 0px 0px 2px rgba(var(--color-primary-r), var(--color-primary-g), var(--color-primary-b), 0.5)
+    }
+    
+    .add-shadow-5 {
+        box-shadow: 0px 0px 5px rgba(var(--color-primary-r), var(--color-primary-g), var(--color-primary-b), 0.5)
+    }
+    
+    .add-shadow-10 {
+        box-shadow: 0px 0px 10px rgba(var(--color-primary-r), var(--color-primary-g), var(--color-primary-b), 0.5)
+    }
+    
+    .add-shadow-20 {
+        box-shadow: 0px 0px 10px rgb(var(--color-primary-r), var(--color-primary-g), var(--color-primary-b))
+    }
+    
+    .add-shadow-search {
+        box-shadow: 0px 0px 25px rgba(19, 70, 102, 0.2);
+    }
+    
+ </code>
+    </section>
+
+
+    <section id="doc_container" class="main-section">
+        <h2>Container</h2>
+        <pre>
+     <code>
+        .container {
+            width: 100vw;
+            height: 95vh;
+            overflow-y: auto;
+            scroll-behavior: smooth
+        }
+
+        .mainWrapper {
+            overflow: hidden;
+            max-width: 1340px;
+            margin: 0 auto;
+            min-height: 95vh;
+        }
+        .wrapper {
+            height: 100%;
+            max-width: 1340px;
+            margin: auto;
+        }
+            
+        .w-100 {
+          width: 100%
+        }
+    
+ </code>
+    </section>
+
+    <section id="doc_component" class="main-section">
+        <h2>Component</h2>
+        <pre>
+     <code>.component {
+        position: relative;
+        padding: 24px;
+    }
+    
+    .component .heading {
+        color: rgba(var(--color-primary-r), var(--color-primary-g), var(--color-primary-b), .8);
+        font-size: 1.33rem;
+        padding: 24px 24px 18px 12px;
+        font-family: 'SemiBold'
+    }  
+ </code>
+    </section>
+
+
+    <section id="doc_card" class="main-section">
+        <h2>Card</h2>
+        <pre>
+     <code>.card-dark {
+        background: #f4f4f6;
+        border-radius: 4px;
+        padding: 18px;
+        border: 1px solid rgba(var(--color-primary-r), var(--color-primary-g), var(--color-primary-b), .25);
+    }
+    
+        .card-dark .title {
+            color: #0B58B9;
+            font-size: 1.2rem;
+            width: 100%;
+            padding: 1.66% 3.33% .66% 3.33%;
+        }
+    
+        .card-dark .sub-title {
+            color: #0B58B9;
+            width: 100%;
+            font-size: 0.75rem;
+            padding: 0 3.33%;
+            text-align: left;
+            color: rgba(var(--color-primary-r), var(--color-primary-g), var(--color-primary-b), 0.75);
+        } 
+
+        .card-publisher {
+            border-radius: 4px;
+            padding: 18px;
+        }
+ </code>
+    </section>
+
+    
+    <section id="doc_heading" class="main-section">
+        <h2>Headings</h2>
+        <pre>
+     <code>h1.title {
+        font-size: 2em;
+        margin: 0.67em 0;
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 24px;
+        line-height: 1.5rem;
+        font-family: "SemiBold";
+        margin-top: 0;
+        display: inline-block;
+        max-width: calc(100% - 180px);
+    }
+    
+    h1.large-title {
+        font-size: 18px;
+        font-size: 1.125rem;
+        line-height: 29px;
+        line-height: 1.8125rem;
+        color: rgba(var(--color-primary-r), var(--color-primary-g), var(--color-primary-b), 0.75);
+        font-family: "SemiBold";
+        margin: 0 0 20px;
+        padding: 30px 0 0
+    }
+    
+    h1.semi-big-title {
+        font-size: 25px;
+        font-size: 1.5rem;
+        line-height: 36px;
+        line-height: 2.3125rem;
+        color: rgba(var(--color-primary-r), var(--color-primary-g), var(--color-primary-b), 0.75);
+        font-family: "SemiBold";
+        margin: 0 0 20px;
+        padding: 30px 0 0
+    }
+    
+    h1.big-title {
+        display: block;
+        font-size: 32px;
+        font-size: 2rem;
+        line-height: 45px;
+        line-height: 2.8125rem;
+        font-family: "SemiBold";
+        padding-right: 100px;
+        margin: 0;
+    }
+    
+    h2 {
+        display: block;
+        font-size: 32px;
+        font-size: 2rem;
+        line-height: 48px;
+        line-height: 3rem;
+        font-family: "SemiBold";
+        margin: 50px 0 30px;
+        text-align: left
+    }
+ </code>
+    </section>
+    
+    <section id="doc_responsive" class="main-section">
+        <h2>Responsive</h2>
+        <pre>
+            @media only screen and (max-width:1340px) { }
+            
+            @media only screen and (min-width:1339px) { }
+
+            @media only screen and (orientation: portrait) { }
+     <code>
+ </code>
+    </section>
+
+    <section id="doc_component_js" class="main-section">
+        <h2>Component JS</h2>
+        <pre>
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, autem?
+     <code>
+ </code>
+    </section>
+
+    <section id="doc_template" class="main-section">
+        <h2>Template JS</h2>
+        <pre>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, molestias.
+     <code>
+ </code>
+    </section>
+
+    <section id="doc_multilang" class="main-section">
+        <h2>Multilang JS</h2>
+        <pre>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, labore.
+     <code>
+ </code>
+    </section>
+    
+      
+    <section id="doc_cross" class="main-section">
+        <h2>Cross Platform Software Development</h2>
+        <pre>
+    Mobile & Desktop
+    *********************************************
+    * Cordova ===> HTML, CSS, Javascript ===> Android, iOS, Desktop
+    * Framework7 ===> HTML, CSS, Javascript ===> Android, iOS, Desktop
+    * Flutter ===> Dart ===> Android, iOS, Desktop
+    
+    
+    Mobile
+    *********************************************
+    * React Native ===> React ===> Android, iOS
+    * Xamarin ===> C# ===> Android, iOS
+    * Ionic ===> React, VUE, Angular ===> Android, iOS
+    
+    
+    Desktop
+    *********************************************
+    * Electron ===> HTML, CSS, Javascript ===> Desktop
+    
+    </section>
+
+
+        
+    </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    
+    
+</body>
+</html>
