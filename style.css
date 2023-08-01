@@ -35,13 +35,32 @@ h1{
     width: 100%;
 }
 
+.logo-container{
+    margin-top: 5%;
+    padding-bottom: 5%;
+    width: 100%;
+    border-bottom: 2px solid #5ab0f7;
+    padding-left: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img{
+    width: 80%;
+}
+
 .nav-bar{
     position: fixed;
     background-color: rgb(68, 68, 68);
     width: 15%;
     height: 100%;
-    padding-left: 18px;
     overflow: auto;
+ }
+
+ .nav-bar-items-container{
+    margin-top: 3%;
+    padding-left: 18px;
  }
 
  li{
@@ -58,6 +77,11 @@ a:hover{ text-decoration: underline;}
     font-size: 16px;
     text-decoration: none;
     outline: none;
+}
+
+.rounded-horizontal-ruler{
+    border: 2px solid #5ab0f7;
+    border-radius: 8px;
 }
 
 .main-section-right{
